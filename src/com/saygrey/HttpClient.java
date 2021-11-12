@@ -41,9 +41,9 @@ public class HttpClient {
     }
 
     /**
-     *
-     * @param strm
-     * @return
+     * http header reader function
+     * @param strm - object of basic InputStream class, from him we will read header as bytes massive
+     * @return string, that contains header
      * @throws IOException
      */
     public static String readHeader(InputStream strm) throws IOException {
@@ -55,9 +55,9 @@ public class HttpClient {
     }
 
     /**
-     *
-     * @param httpHeader
-     * @return
+     *func for sending requests to server
+     * @param httpHeader - string, that contains http header, to send
+     * @return string, that contains servers answer
      * @throws Exception
      */
     public static String sendRequest(String httpHeader) throws Exception {
@@ -95,9 +95,9 @@ public class HttpClient {
 
 
     /**
-     *
-     * @param socket
-     * @return
+     *func for getting response from server
+     * @param socket - object of Socket class, that uses to connect to server
+     * @return string, that contains server answer
      * @throws Exception
      */
     private static String getAnswer(Socket socket) throws Exception {
@@ -123,9 +123,9 @@ public class HttpClient {
     }
 
     /**
-     *
-     * @param header
-     * @return
+     *func that gets host
+     * @param header - http header, that you want send
+     * @return string, that contains host name
      * @throws ParseException
      */
     private static String getHost(String header) throws ParseException {
@@ -155,9 +155,9 @@ public class HttpClient {
     }
 
     /**
-     *
-     * @param hostWithPort
-     * @return
+     *func that gets port
+     * @param hostWithPort - string, that contains host and port with ":" separator
+     * @return int with port value
      */
     private static int getPort(String hostWithPort) {
 
@@ -170,9 +170,9 @@ public class HttpClient {
     }
 
     /**
-     *
-     * @param hostWithPort
-     * @return
+     *func that gets host
+     * @param hostWithPort - string, that conatins host and port with ":" separator
+     * @return string, that contains host name
      */
     private static String getHostWithoutPort(String hostWithPort) {
 
