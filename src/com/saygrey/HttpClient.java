@@ -1,4 +1,4 @@
-package Main;
+package com.saygrey;
 
 import java.io.*;
 import java.net.InetAddress;
